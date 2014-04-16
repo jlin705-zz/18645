@@ -139,7 +139,6 @@ PPM_IMG read_ppm(const char * path){
     /*Skip the magic number*/
     fscanf(in_file, "%s", sbuf);
     printf("%s", sbuf);
-    //fgets(sbuf, sizeof sbuf, in_file);
     c = fgetc(in_file);
     c = fgetc(in_file);
     while (c == '#') {
@@ -163,7 +162,7 @@ PPM_IMG read_ppm(const char * path){
     
     return result;
 }
-
+// Write back to generate the image
 void write_ppm(PPM_IMG img, const char * path){
     FILE * out_file;
     int i;
